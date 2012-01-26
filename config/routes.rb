@@ -1,4 +1,6 @@
 Cfdm::Application.routes.draw do
+  root :to => "wod_list#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
