@@ -1,0 +1,20 @@
+<center><%=@todays_date%></center>
+<p />
+<b><%='Strength/Skill'%></b><br />
+<%=@todays_strength_skill%>
+<p />
+<b><%='WOD'%></b>
+<%=@todays_wod.each do |item|%>
+	<br /><%=item%>
+<%end%>
+
+<p />
+<center><%=@tomorrows_date%></center>
+<p />
+<b><%='Strength/Skill'%></b><br />
+<%=@tomorrows_strength_skill%>
+<p />
+<b><%='WOD'%></b>
+<%=@tomorrows_wod.each do |item|%>
+	<br /><%=item%>
+<%end%>
