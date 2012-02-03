@@ -4,7 +4,7 @@
 <%=@todays_strength_skill%>
 <p />
 <b><%='WOD'%></b>
-<%=@todays_wod.each do |item|%>
+<%@todays_wod.each do |item|%>
 	<br /><%=item%>
 <%end%>
 
@@ -15,6 +15,6 @@
 <%=@tomorrows_strength_skill%>
 <p />
 <b><%='WOD'%></b>
-<%=@tomorrows_wod.each do |item|%>
+<%@tomorrows_wod.each do |item|%>
 	<br /><%=item%>
 <%end%>
