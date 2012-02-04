@@ -1,20 +1,23 @@
-<center><%=@todays_date%></center>
-<p />
-<b><%='Strength/Skill'%></b><br />
+<p/>
+<%=image_tag("crossfitdelmar.jpeg", :class => "logo")%>
+<p/>
+<h1><%=@todays_date%></h1>
+<p/>
+<b><%='Strength/Skill'%></b><br/>
 <%=@todays_strength_skill%>
-<p />
+<p/>
 <b><%='WOD'%></b>
 <%@todays_wod.each do |item|%>
-	<br /><%=item%>
+	<br/><%=item%>
 <%end%>
 
-<p />
-<center><%=@tomorrows_date%></center>
-<p />
-<b><%='Strength/Skill'%></b><br />
+<p/>
+<h1><%=@tomorrows_date%></h1>
+<p/>
+<b><%='Strength/Skill'%></b><br/>
 <%=@tomorrows_strength_skill%>
-<p />
+<p/>
 <b><%='WOD'%></b>
 <%@tomorrows_wod.each do |item|%>
-	<br /><%=item%>
+	<br/><%=item%>
 <%end%>

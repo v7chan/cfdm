@@ -1,4 +1,21 @@
+h1 {
+	font-size: 15px;
+	font-weight: bold;
+	color: #BC1D00;
+	text-align:center;
+}
 
+body {
+	background-color: #F2F2F2;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+.logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
