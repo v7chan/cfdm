@@ -1,23 +1,38 @@
+<script type="text/javascript">
+window.scrollTo(0, 1);
+</script>
 <p/>
 <%=image_tag("logo.png", :class => "logo")%>
 <p/>
 <h1><%=@todays_date%></h1>
 <p/>
-<b><%='Strength/Skill'%></b><br/>
-<%=@todays_strength_skill%>
-<p/>
-<b><%='WOD'%></b>
-<%@todays_wod.each do |item|%>
-	<br/><%=item%>
+
+<%unless @todays_strength_skill.nil?%>
+  <b><%='Strength/Skill'%></b><br/>
+  <%=@todays_strength_skill%>
+  <p/>
+<%end%>
+
+<%unless @todays_word.nil?%>
+  <b><%='WOD'%></b>
+  <%@todays_wod.each do |item|%>
+  	<br/><%=item%>
+  <%end%>
 <%end%>
 
 <p/>
 <h1><%=@tomorrows_date%></h1>
 <p/>
-<b><%='Strength/Skill'%></b><br/>
-<%=@tomorrows_strength_skill%>
-<p/>
-<b><%='WOD'%></b>
-<%@tomorrows_wod.each do |item|%>
-	<br/><%=item%>
+
+<%unless @tomorrows_strength_skill.nil?%>
+  <b><%='Strength/Skill'%></b><br/>
+  <%=@tomorrows_strength_skill%>
+  <p/>
+<%end%>
+
+<%unless @tomorrows_wod.nil?%>
+  <b><%='WOD'%></b>
+  <%@tomorrows_wod.each do |item|%>
+  	<br/><%=item%>
+  <%end%>
 <%end%>
