@@ -25,5 +25,6 @@ class WodListController < ApplicationController
     @tomorrows_strength_skill = tomorrows_list[1]
     @tomorrows_wod = tomorrows_list[3..(tomorrows_list.length - 1)]
     
+    @debug = todays_list
   end
 end
