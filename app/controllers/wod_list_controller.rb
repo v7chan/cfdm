@@ -5,7 +5,7 @@ class WodListController < ApplicationController
   def index
     doc = Nokogiri::HTML(open("http://www.crossfitdelmar.com/"))
     
-    @todays_date = doc.xpath('//h3//text()')
+    @todays_date = doc.xpath('//div[3]/div[2]/div/div[2]/h3//text()')
     @tomorrows_date = doc.xpath('//div[3]/a//text()')
     
     todays_list = doc.xpath('//div[2]/table//text()')
