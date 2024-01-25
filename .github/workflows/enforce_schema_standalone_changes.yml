@@ -6,7 +6,7 @@ on:
       - synchronize
       - edited
     branches-ignore:
-      - '**release**'
+      - 'release/**'
     paths:
       - 'db/migrate/**'
       - 'db/activity_events_migrations/**'
