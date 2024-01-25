@@ -5,8 +5,8 @@ on:
       - opened
       - synchronize
       - edited
-    branches:
-      - only_me
+    branches-ignore:
+      - 'release/**'
     # paths:
     #   - 'db/migrate/**'
     #   - 'db/activity_events_migrations/**'
