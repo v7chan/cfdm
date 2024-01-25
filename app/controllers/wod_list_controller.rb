@@ -1,6 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 
+# hello world
 class WodListController < ApplicationController
   def index
     doc = Nokogiri::HTML(open("http://www.crossfitdelmar.com/"))
