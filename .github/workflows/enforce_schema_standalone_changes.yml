@@ -7,9 +7,9 @@ on:
       - edited
     branches-ignore:
       - 'release/**'
-    paths:
-      - 'db/migrate/**'
-      - 'db/activity_events_migrations/**'
+    # paths:
+    #   - 'db/migrate/**'
+    #   - 'db/activity_events_migrations/**'
 jobs:
   validate_files_changed:
     runs-on: ubuntu-latest
