@@ -22,4 +22,4 @@ jobs:
       - run: |
           echo "base sha: ${{ env.base_branch_sha }}"
           echo "head sha: ${{ env.current_pr_sha }}"
-      - run: \! git diff --name-only ${{ env.base_branch_sha }} ${{ env.current_pr_sha }} | grep "^[^db/]"
+      - run: '! git diff --name-only ${{ env.base_branch_sha }} ${{ env.current_pr_sha }} | grep "^[^db/]"'
