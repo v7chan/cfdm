@@ -5,13 +5,12 @@ on:
       - opened
       - synchronize
       - edited
-    branches-ignore:
-      - '**release**'
     paths:
       - 'db/migrate/**'
       - 'db/activity_events_migrations/**'
 jobs:
   validate_files_changed:
+    if: ${{ ! contains(github.head_ref, 'release') }}
     runs-on: ubuntu-latest
     env:
       base_branch_sha: ${{ github.event.pull_request.base.sha }}
