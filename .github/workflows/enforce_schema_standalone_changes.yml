@@ -13,10 +13,10 @@ jobs:
   validate_files_changed:
     runs-on: ubuntu-latest
     env:
-      base_branch_sha: ${{ github.event.pull_request.base.sha }}
+      base_branch: ${{ github.event.pull_request.base.ref }}
       current_pr_sha: ${{ github.event.pull_request.head.sha }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - run: '! git diff --name-only ${{ env.base_branch_sha }} ${{ env.current_pr_sha }} | grep "^[^db/]"'
+      - run: '! git diff --name-only origin/${{ env.base_branch }} ${{ env.current_pr_sha }} | grep "^[^db/]"'
