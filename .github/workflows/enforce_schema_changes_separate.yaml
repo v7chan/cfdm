@@ -17,6 +17,4 @@ jobs:
       current_pr_sha: ${{ github.event.pull_request.head.sha }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - run: '! git diff --name-only ${{ env.base_branch_sha }} ${{ env.current_pr_sha }} | grep "^[^db/|^spec/]"'
