@@ -1,0 +1,6 @@
+---
+metadata:
+  codeowners: foo
+enforce_dependencies: true
+dependencies:
+- .
