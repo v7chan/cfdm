@@ -1,0 +1,20 @@
+name: Schema changes must be made on a separate PR
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - edited
+    paths:
+      - 'db/migrate/**'
+      - 'db/activity_events_migrations/**'
+jobs:
+  validate_files_changed:
+    if: ${{ ! contains(github.head_ref, 'release') }}
+    runs-on: ubuntu-latest
+    env:
+      base_branch_sha: ${{ github.event.pull_request.base.sha }}
+      current_pr_sha: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: '! git diff --name-only ${{ env.base_branch_sha }} ${{ env.current_pr_sha }} | grep "^[^db/|^spec/]"'
